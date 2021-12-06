@@ -117,9 +117,7 @@ class _CheckoutState extends State<Checkout> {
                         color: Color(0xFFF93963),
                         onPressed: () => {
                           showDialog(
-                            context: context,
-                            // ignore: deprecated_member_use
-                            child: AlertDialog(
+                            builder: (context) => AlertDialog(
                               shape: RoundedRectangleBorder(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(16.0))),
@@ -192,7 +190,7 @@ class _CheckoutState extends State<Checkout> {
                                   ],
                                 ),
                               ),
-                            ),
+                            ), context: context,
                           ),
                         },
                         child: Container(
